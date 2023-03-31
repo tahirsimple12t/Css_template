@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url(../Image/texture-gc29fc596e_1920.jpg);
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+            border: 2px solid white;
+            border-radius: 10px;
+             
+        }
+        form{
+            padding: 30px 0;
+        }
+        .contain1{
+           position: relative;
+            margin: 30px 0;
+            outline: none;
+            border-bottom: 2px solid white;
+        }
+        .conain2{
+            position: relative;
+            margin: 30px 0;
+            outline: none;
+            border-bottom: 2px solid white;
+        }
+        input{
+            width: 100%;
+            padding: 10px 0;
+            background: none;
+            border: none;  
+            outline: none;  
+        }
+         label{
+            position: absolute;
+             bottom: 10px;
+             color: beige;  
+            cursor: pointer;
+            left: 0;
+             transition: 0.5s; 
+         }
+         input:focus ~ label{
+            transform: translateY(-20px);  
+         }
+         .btn{
+            text-align: center;
+         }
+         button{
+            width: 100px;
+            padding: 5px 10px;
+            height: 40px;
+            border-radius: 15px;
+            color: lightcyan;
+            background-color: rgb(168, 163, 156);
+            transform: translateY(30%);
+         }
+         form h1{
+            text-align: center;
+            color:  white;
+
+            
+         }
+    </style>
+</head>
+<body>
+     <div class="box">
+        <form>
+            <h1>Login_form</h1>
+            <div class="contain1">
+                <input type="text" id="txt">
+                <label for="txt">username</label>
+            </div>
+            <div class="conain2">
+                <input type="password" id="sam">
+                <label for="sam">password</label>
+            </div>
+            <div class="btn">
+                <button>Login</button>
+            </div>
+        </form>
+     </div>
+</body>
+</html>

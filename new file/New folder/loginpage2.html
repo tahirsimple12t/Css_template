@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background:linear-gradient(to right,red,green,yellow);
+            overflow: hidden;
+            height: 100vh;
+        }
+        .center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color:rgb(118, 104, 104);
+            border: 2px solid green;
+            border-radius: 10px;
+             
+        }
+        .center h1{
+            text-align: center;
+            padding: 0 0 20px 0;
+             border-bottom: 1px solid;
+        }
+        form{
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+        .txt-fld{
+            position:relative;
+            border-bottom: 2px solid #adadad;
+            margin: 30px 0;
+        }
+        input{
+             width: 100%;
+             padding: 0 5px;
+             height: 40px;
+             font-size: 16px;
+             border: none;
+             background: none;
+             outline: none;
+        }
+        label{
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            color: #adadad;
+            transform: translatey(-50%);
+            font-size: 20px;        
+        }
+        span::before{
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #2691d9;
+        }
+        input:focus~label,
+        input:valid~label{
+            top: -5px;
+            color: #2691d9;
+        }
+        .pass{
+            margin: -5px 0 20px 5px;
+            color: #a6a6a6;
+            cursor: pointer;
+        }
+        input[type=submit]{
+            width: 100%;
+            height: 40px;
+            border: 2px solid gray;
+            background: #2691d9;
+            border-radius: 20px;
+            font-size: 18px;
+            color: wheat;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+        }
+        input[type=submit]:hover{
+            background-color: greenyellow;
+            color: black;
+            transition: 1.2s;
+        }
+         .signup{
+            margin: 30px 0;
+            text-align: center;
+            font-size: 16px;
+            color: rgb(17, 241, 118);
+            cursor: pointer;
+        }
+        .signup a{
+            text-decoration: none;
+            color: #080a85;
+        }
+        .signup a:hover{
+             color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>login</h1>
+        <form method="post">
+            <div class="txt-fld"> 
+             <input type="text" id="lab">
+             <span></span>
+             <label for="lab">username</label>
+            </div>
+            <div class="txt-fld"> 
+                 
+                <input type="password" id="pass">
+                <label for="pass">password</label>
+                <span></span>
+             </div>
+             <div class="pass">
+                forgetpassword?
+             </div>
+             <input type="submit" value="Login">
+             <div class="signup">
+                Not a member? <a href="#">Signup</a>
+             </div>
+        </form>
+    </div>
+</body>
+</html>
